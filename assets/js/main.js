@@ -18,7 +18,7 @@ let casuali = document.getElementById("numCasual");
 
 
 for( let i = 0; i < 5; i++){
-  let numPc = Math.round(Math.random() * (10 - 1 + 1)) + 1;
+  let numPc = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
   if( arrayCasual.includes(numPc)){
       i--;
   }else{
@@ -27,4 +27,11 @@ for( let i = 0; i < 5; i++){
 }
 
 console.log(arrayCasual);
+
+casuali.append(`I numeri da ricordare sono: ${arrayCasual}`);
+
+setTimeout(nascondino, 5000);
+function nascondino(){
+  casuali.classList.add("d-none");
+}
 
