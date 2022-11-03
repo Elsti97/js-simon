@@ -14,13 +14,17 @@
 let arrayCasual = [];
 let casuali = document.getElementById("numCasual");
 
-for (let i = 0; i < 5; i++){
-  let k = Math.floor(Math.random() * (10 - 1 + 1) + 1);
-  arrayCasual.push(k);
+
+
+
+for( let i = 0; i < 5; i++){
+  let numPc = Math.round(Math.random() * (10 - 1 + 1)) + 1;
+  if( arrayCasual.includes(numPc)){
+      i--;
+  }else{
+      arrayCasual.push(numPc);
+  }
 }
 
-
-
 console.log(arrayCasual);
-
 
