@@ -13,6 +13,7 @@
 
 let arrayCasual = [];
 let casuali = document.getElementById("numCasual");
+let arrayPlayer = [];
 
 
 
@@ -33,5 +34,13 @@ casuali.append(`I numeri da ricordare sono: ${arrayCasual}`);
 setTimeout(nascondino, 5000);
 function nascondino(){
   casuali.classList.add("d-none");
+  
+  for (let k = 0; k < 5; k++){
+    if()
+  }
+  let numPlayer = parseInt(prompt("Inserisci un numero"));
+  arrayPlayer.push(numPlayer);
 }
+
+console.log(arrayPlayer);
 
