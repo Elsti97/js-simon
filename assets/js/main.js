@@ -6,13 +6,14 @@
 //   - creare una funzione per generare num random
 //   - ciclo per generare 5 numeri casuali nell'array / bonus: controllare che siano univoci
 //   - pushiamo ogni num nell array vuoto
-//   - stampiamo i pagina i numeri generati
+//   - stampiamo in pagina i numeri generati
 //   - nascondo i numeri visualizzati con il css dopo tot secondi
 //   - far comparire 5 prompt dopo tot secondi
 
 
 let arrayCasual = [];
 let casuali = document.getElementById("numCasual");
+let risultato = document.getElementById("numOk");
 let arrayPlayer = [];
 
 for( let i = 0; i < 5; i++){
@@ -39,7 +40,16 @@ function numsUtente(){
     let numPlayer = parseInt(prompt("Inserisci un numero"));
     arrayPlayer.push(numPlayer);
   }
+
+  const numsGiusti = [];
+	for(let k = 0; k < arrayPlayer.length; k++) {
+		
+		if(arrayCasual.includes(arrayPlayer[k]) == true) {
+			numsGiusti.push(arrayPlayer[k]);
+		}
+	}
+
   console.log(arrayPlayer);
+  console.log(numsGiusti);
+  risultato.append(`Hai indovinato ${numsGiusti.length} numeri che sono: ${numsGiusti}`);
 }
-
-
